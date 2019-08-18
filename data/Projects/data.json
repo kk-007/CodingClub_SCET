@@ -1,0 +1,18 @@
+[
+	{
+		"title":"New India News",
+		"details":"This is android application for get the realtime news by different category",
+		"link":"https://play.google.com/store/apps/details?id=gd.rf.kk007.newsexpress",
+		"pre":"Android",
+		"diff":"medium +",
+		"mentor":"Dhatri Pandya"
+	},
+	{
+		"title":"Link The Link",
+		"details":"Using This Web App You can link your all social media account links in only one link and by sharing only one link you can share your whole profile",
+		"link":"http://kk007.000webhostapp.com/link/",
+		"pre":"PHP JS HTML CSS",
+		"diff":"medium +",
+		"mentor":"Dhatri Pandya"
+	}
+]

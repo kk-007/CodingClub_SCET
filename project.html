@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        
+          <meta name="viewport" content="width=device-width , initial-scale=1" />
+                <title>SCET's Coding Club</title>
+        
+             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+            <link rel="stylesheet" href="css/style.css">
+            <style>
+                    .project{
+                        box-shadow: 0 0 5px #607d8b;
+                        margin-top: 20px;
+                    }
+                    .projectTitles{
+                        font-size: 17px;
+                        color: #31708f;
+                    }
+            </style>
+    </head>
+    <body>
+          <img class="img-responsive center-block" src="img/temp%20header.png">
+       <div class="navigation">
+            <div class = "container header">
+            </div>  
+        </div>
+      <div class="container">
+				<div class="row inner blogs projects">
+                        <!-- <div class="container project blue">
+                                <h3>This Web Site *</h3>
+                                <p><span class="projectTitles">Details : </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate esse maxime eum sapiente molestiae totam quibusdam dolorem reprehenderit molestias, necessitatibus, consectetur neque dicta explicabo doloribus nulla ut error deserunt ipsum.<br>
+                                <strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam architecto quasi</strong> </p>
+                                <p><span class="projectTitles">Pre - Requisites : </span>Basic knowledge of HTML, CSS and JavaScript.</p>
+                                <p><span class="projectTitles">Bonous Points : </span>Have programmed earlier on the beckend, knowledge of system admin panel, like cPanel or similar</p>
+                                <p><span class="projectTitles">Difficulty : </span>Medium +</p>
+                                <p><span class="projectTitles">Mentor(s) : </span>XYZ&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope"></i> xyz@gmail.com</p>
+                            </div>
+                            <div class="container project">
+                                    <h3>This Web Site *</h3>
+                                    <p><span class="projectTitles">Details : </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate esse maxime eum sapiente molestiae totam quibusdam dolorem reprehenderit molestias, necessitatibus, consectetur neque dicta explicabo doloribus nulla ut error deserunt ipsum.<br>
+                                    <strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam architecto quasi</strong> </p>
+                                    <p><span class="projectTitles">Pre - Requisites : </span>Basic knowledge of HTML, CSS and JavaScript.</p>
+                                    <p><span class="projectTitles">Bonous Points : </span>Have programmed earlier on the beckend, knowledge of system admin panel, like cPanel or similar</p>
+                                    <p><span class="projectTitles">Difficulty : </span>Medium +</p>
+                                    <p><span class="projectTitles">Mentor(s) : </span>XYZ&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope"></i> xyz@gmail.com</p>
+                                </div> -->
+						</div>
+					</div>
+            <!--ends-->
+
+        
+        <!--footer-->
+        
+        <div class="container footer"></div>
+        <!--footer-->
+    
+    
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+      $.get("./header.html",function(data){
+        $('.header').append(data);
+      });
+      $.get("./footer.html",function(data){
+        $('.footer').append(data);
+      });
+    });
+    $.getJSON("./data/Projects/data.json",function(data){
+      for(let i=0;i<data.length;i++){
+        let project = '<div class="container project blue"><h3>'+data[i]["title"]+'</h3><p><span class="projectTitles">Details : </span>'+data[i]["details"]+'<p><span class="projectTitles">Link : </span><a target="_blank" href="'+data[i]["link"]+'">'+data[i]["link"]+'</a></p><p><span class="projectTitles">Pre - Requisites : </span>'+data[i]["pre"]+'</p><p><span class="projectTitles">Difficulty : </span>'+data[i]["diff"]+'</p><p><span class="projectTitles">'+data[i]["mentor"]+'</span></p></div>';
+          $('.projects').append(project);
+      }
+    });
+</script>
+    </body>
+
+
+
+
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        
+          <meta name="viewport" content="width=device-width , initial-scale=1" />
+                <title>SCET's Coding Club</title>
+        
+             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+            <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+          <img class="img-responsive center-block" src="img/temp%20header.png">
+            <!--header    
+         
+     <div class="header sec1">  
+            <div class="container">
+                    <div class="row text-center">
+                    <div class="col-xs-4">
+                        <img class="clogo img-responsive" src="img/clogo.png">
+                        </div>
+                    <div class="col-xs-4">
+                         <img class="img-responsive" src="img/slogo.png">
+                        <h1 style ="font-size:1.8vw"> Computer Department</h1>
+                        <h1 style ="font-size:1.5vw"> Coding Club</h1>
+                        </div>
+                        <div class="col-xs-4">
+                        <img class="scetlogo img-responsive" src="img/SCET-LOGO.png" width="100px" height="100px">
+                    </div>
+                    </div>
+                </div>
+                </div>
+        <!--header sections end here-->
+        
+        <!--navigation starts-->
+        
+        
+       <div class="navigation">
+            <div class = "container header">
+            </div>  
+        </div>
+<!--<nav class="navbar">
+<!--<nav class="navbar"-->	
+        
+        <!--columsn-->
+        
+        
+         <!--2colum here-->
+      <div class="container">
+				<div class="row text-center inner events">
+					<!-- <div class="col-sm-4">
+						<div class="two-column">
+							<img src="img/c.png">
+							<h2>Lorem Workshop </h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.</p>>
+
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="two-column">
+								<img src="img/c.png">
+								<h2>Ipsum Workshop</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.</p>
+								</div>
+							</div>
+                            <div class="col-sm-4">
+							<div class="two-column">
+								<img src="img/c.png">
+								<h2>Code Fest</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.</p>
+								</div>
+							</div> -->
+						</div>
+					</div>
+            <!--ends-->
+
+        
+        <!--footer-->
+        
+        <div class="container footer">
+                
+                    </div>
+        <!--footer-->
+    
+    
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+      $.get("./header.html",function(data){
+        $('.header').append(data);
+      });
+      $.get("./footer.html",function(data){
+        $('.footer').append(data);
+      });
+      $.getJSON("./data/Events/data.json",function(data){
+        for(let i=0;i<data.length;i++){
+            let events = '<a target="_blank" href="./data/Events/docs/'+data[i]["content"]+'"><div class="col-sm-4"><div class="two-column"><img src="./data/Events/img/'+data[i]["img-url"]+'" style="width:100%;"><h2>'+data[i]["name"]+'</h2><p></p></div></div></a>';
+            $('.events').append(events);
+        }
+      });
+    });
+</script>
+    </body>
+
+
+
+
+
+</html>

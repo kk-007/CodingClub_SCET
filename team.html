@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        
+          <meta name="viewport" content="width=device-width , initial-scale=1" />
+                <title>SCET's Coding Club</title>
+        
+             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+            <link rel="stylesheet" href="css/style.css">
+    </head>
+    <img class="img-responsive center-block" src="img/temp%20header.png">
+            <!--header    
+         
+     <div class="header sec1">  
+            <div class="container">
+                    <div class="row text-center">
+                    <div class="col-xs-4">
+                        <img class="clogo img-responsive" src="img/clogo.png">
+                        </div>
+                    <div class="col-xs-4">
+                         <img class="img-responsive" src="img/slogo.png">
+                        <h1 style ="font-size:1.8vw"> Computer Department</h1>
+                        <h1 style ="font-size:1.5vw"> Coding Club</h1>
+                        </div>
+                        <div class="col-xs-4">
+                        <img class="scetlogo img-responsive" src="img/SCET-LOGO.png" width="100px" height="100px">
+                    </div>
+                    </div>
+                </div>
+                </div>
+        <!--header sections end here-->
+        
+        <!--navigation starts-->
+       <div class="navigation">
+            <div class = "container header">
+            </div>
+        </div>
+<!--<nav class="navbar">
+        <!--columsn-->
+        <h1 class="mainheading"> Team Members</h1>
+            <!--2colum here-->
+      <div class="container">
+           <h2 class="teamHeadingDesign"> Faculty</h2>
+				<div class="row text-center inner faculty">
+					<!-- <div class="col-sm-4">
+						<div class="two-column">
+							<img src="img/c.png">
+							<h2>Lorem Workshop </h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros </p>
+
+						</div>
+					</div>
+                    <div class="col-sm-4">
+                        <div class="two-column">
+                            <img src="img/c.png">
+                            <h2>Ipsum Workshop</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="two-column">
+                            <img src="img/c.png">
+                            <h2>Code Fest</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros </p>
+                        </div>
+                    </div> -->
+                </div>
+			</div>
+        
+        
+            <div class="container">
+            <h2 class="teamHeadingDesign"> Coder Team </h2>
+				<div class="row text-center inner coder">
+					<!-- <div class="col-sm-4">
+						<div class="two-column">
+							<img src="img/c.png">
+							<h2>Lorem Workshop </h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros </p>
+
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="two-column">
+								<img src="img/c.png">
+								<h2>Ipsum Workshop</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros </p>
+								</div>
+							</div>
+                            <div class="col-sm-4">
+							<div class="two-column">
+								<img src="img/c.png">
+								<h2>Code Fest</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros </p>
+								</div>
+							</div>
+                    		</div> -->
+					</div>
+        
+        <div class="container">
+            <h2 class="teamHeadingDesign"> Designer </h2>
+				<div class="row text-center inner designer">
+					<!-- <div class="col-sm-6">
+						<div class="two-column">
+							<img src="img/c.png">
+							<h2>Lorem Workshop </h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros </p>
+
+							</div>
+						</div>
+						    <div class="col-sm-6">
+							<div class="two-column">
+								<img src="img/c.png">
+								<h2>Code Fest</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros </p>
+								</div>
+							</div> -->
+                    		</div>
+					</div>
+        
+        <!--footer-->
+        
+        <div class="container footer">
+                
+                    </div>
+        <!--footer-->
+    
+    
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="./bootstrap/js/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $.get("./header.html",function(data){
+            $('.header').append(data);
+        });
+        $.get("./footer.html",function(data){
+            $('.footer').append(data);
+        });
+        $.getJSON("./data/Team/data.json",function(data){
+            for(let i=0;i<data.length;i++){
+                /*'<div class="col-sm-3"><div class="two-column"><img src="./data/Team/img/'+data[i]["img-url"]+'"><h4>'+data[i]["name"]+'</h4><p></p></div></div>'*/
+                let faculty = '<div class="col-sm-3"><div class="two-column"><img src="./data/Team/img/'+data[i]["img-url"]+'"><h4>'+data[i]["name"]+'</h4><p></p></div></div>';
+                $('.faculty').append(faculty);
+                //console.log(data[i]);
+            }
+        });
+        $.getJSON("./data/Designer/data.json",function(data){
+            for(let i=0;i<data.length;i++){
+                let faculty = '<div class="col-sm-3"><div class="two-column"><img src="./data/Designer/img/'+data[i]["img-url"]+'"><h4>'+data[i]["name"]+'</h4><p></p></div></div>';
+                $('.designer').append(faculty);
+            }
+        });
+        $.getJSON("./data/Coder/data.json",function(data){
+            for(let i=0;i<data.length;i++){
+                let faculty = '<div class="col-sm-3"><div class="two-column"><img src="./data/Coder/img/'+data[i]["img-url"]+'"><h4>'+data[i]["name"]+'</h4><p></p></div></div>';
+                $('.coder').append(faculty);
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

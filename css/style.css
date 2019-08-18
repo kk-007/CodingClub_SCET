@@ -1,0 +1,132 @@
+body{
+    /*background-color: lightslategray;*/
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.carousel-inner > .item  {
+   height: 760px;
+}
+
+.img-responsive{
+    
+    margin: 0 auto;
+}
+
+p{
+     color: #333333;
+}
+
+
+
+#sec1{
+    margin-bottom: 10px;
+}
+
+
+.header h1{
+    font-display: auto;
+    color: black;
+    font-size: 60px;
+}
+
+
+.navigation {
+    z-index: 9;
+}
+
+.navbar-nav.navbar-center {
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+	font-size: 50px;
+    color: black;
+}
+
+.navigation li{
+	text-align: center;
+	display:block;
+    font-size: 20px;
+}
+
+.navigation li:hover{
+    margin-left: -3px;
+	border-bottom: 3px solid black;
+    color:blue;
+    background-color: lightgray;
+ 
+}
+.dropdown:active {
+    display:block;
+  }
+
+
+/*slider */
+
+
+
+.about-us{
+    margin-top: 20px;
+    background: #F2F2F2;
+  padding-bottom:10px;
+  margin-bottom: 20px;
+}
+.about-us h2{
+    padding-left: 30px;
+    color: #666666;
+    text-transform: capitalize;
+}
+
+
+
+.about-us p {
+    padding: 27px;
+    text-align: left;
+    color: #333333;
+}
+
+/* two cloumn*/
+
+
+
+.two-column {
+  background: #F2F2F2;
+  padding-bottom:30px;
+  margin-top: 20px;
+margin-bottom: 10px;
+  
+}
+.two-column h2 {
+    color: #666666;
+    text-transform: capitalize;
+}
+.two-column p {
+    padding: 27px;
+    text-align: left;
+    color: #333333;
+}
+
+.two-column img{
+    padding-top: 20px;
+}
+
+
+/* footer */
+.footer{
+    background-color: #1b1a19;
+    width: auto;
+    margin: 10px 10px;
+}
+
+h1.mainheading {
+    margin-left: 150px;
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+h2.teamHeadingDesign{
+    margin-top: 20px;
+    font-family: cursive;
+}
+
